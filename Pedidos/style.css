@@ -13,6 +13,15 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'FraseOp';
+    src: url('../Fonts/fires/FIRES\ PERSONAL\ USE.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -39,6 +48,7 @@ body {
     justify-content: center;
     padding: 0 20px;
     z-index: 1000;
+    border-radius: 5px;
 }
 
 /* Container para os dois logos */
@@ -113,6 +123,84 @@ body {
     font-weight: normal;
 }
 
+/* Container principal - afasta do elemento anterior */
+.buttons-container {
+    font-family: 'FraseOp', Arial, sans-serif;
+    margin-top: 60px; /* Distância do container anterior */
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}
+
+/* Lista de opções */
+.ops-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaço entre os itens */
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Cada item da lista */
+.ops-list li {
+    transition: transform 0.3s ease;
+}
+
+.ops-list li:hover {
+    transform: translateY(-5px);
+}
+
+/* Links estilizados como botões modernos */
+.ops-list a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 25px 35px;
+    border-radius: 16px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efeito hover mais elaborado */
+.ops-list a:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Efeito de brilho no hover */
+.ops-list a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.6s;
+}
+
+.ops-list a:hover::before {
+    left: 100%;
+}
 /* ========== RESPONSIVIDADE ========== */
 @media (max-width: 768px) {
     .main-header {
