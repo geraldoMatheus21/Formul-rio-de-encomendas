@@ -1,6 +1,15 @@
 @font-face {
-    font-family: ;
-    src: url();
+    font-family: 'FraseDeApresentação';
+    src: url('../Fonts/old_school_united/old_school_united_hairline.ttf') format('opentype');
+    font-weight: normal;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'Frase2';
+    src: url('../Fonts/Mercy\ Christole.ttf') format('opentype');
+    font-weight: normal;
+    font-style: bold;
 }
 
 
@@ -11,12 +20,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #898989;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
 /* ========== HEADER ========== */
 .main-header {
+    position: fixed;
     background-color: #000000; /* PRETO */
     width: 100%;
     min-height: 100px; /* ALTURA FIXA */
@@ -60,10 +72,38 @@ body {
     /* margin-right: 30px; */
 }
 
+.Nav {
+    padding: 40px 20px;
+}
+
 .titleApresentacao {
-    width: 75%;
-    margin: auto;
-    padding: 20px 30px;
+    background-color: white; /* FUNDO BRANCO da caixa */
+    border: 2px solid #34495e; /* BORDA da caixa */
+    border-radius: 8px; /* Cantos levemente arredondados */
+    padding: 40px;
+    margin-bottom: 30px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.efeito {
+    background-color: white; /* FUNDO BRANCO da caixa */
+    border: 2px solid #7f8c8d; /* BORDA mais clara */
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.titleApresentacao h1{
+    font-family: inherit;
+    font-family: 'FraseDeApresentação', sans-serif;
+    color: black;
 }
 
 .tt {
@@ -72,6 +112,15 @@ body {
     font-family: Arial, sans-serif;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.ttt {
+    color: black; /* Mudei de #333 para black como você quer */
+    font-size: 2.5rem;
+    font-family: 'Frase2', sans-serif; /* AQUI aplica a fonte */
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: normal; /* Ou bold se quiser negrito */
 }
 
 
