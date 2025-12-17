@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/styleFrom.css">
     <title>Formulário</title>
 </head>
+
 <body>
     <!-- HEADER FIXO -->
     <header class="main-header-form">
         <!-- CORREÇÃO: Use apenas UM container para os dois logos -->
         <div class="logos-container-form">
             <a href="../Pedidos/Index.html">
-                <img src="../Imagens/TAKE 21 FINAL.svg" 
-                    alt="logotake21" 
-                    class="logoform">
+                <img src="../Imagens/TAKE 21 FINAL.svg" alt="logotake21" class="logoform">
             </a>
             <a href="/Pedidos/Index.html">
-                <img src="../Imagens/KM LOGO.png" 
-                    alt="logokm" 
-                    class="logokmform">
+                <img src="../Imagens/KM LOGO.png" alt="logokm" class="logokmform">
             </a>
         </div>
         <article class="Recado">Clique em qualquer imagem para voltar para a página inicial</article>
 
         <!--Formulário-->
-        
+
     </header>
     <main class="Formulário">
-            <form action="#" method="#">
-                Digite seu nome completo: <br>
-                <input type="text" name="nome" id="name"><br>
-                Digite seu vulgo de artista:<br>
-                <input type="text"><br>
-                <label for="beats">Qual gênero você mais faz?
-
-                </label><br>
-            </form>
-        </main>
+        <form action="#" method="#">
+            <h1 class="Title">Conte um pouco sobre você</h1>
+            <a>Digite seu nome completo:</a>
+            <input type="text" name="nome" id="name" class="forms"><br>
+            <a>Digite seu vulgo de artista:</a>
+            <input type="text">
+            <label for="beats"><a>Qual gênero você mais faz?</a>
+                <select name="a" id="genero">
+                    <option value=""></option>
+                    <option value="trap">Trap</option>
+                    <option value="drill">Drill</option>
+                    <option value="boom_bap">Boom Bap</option>
+                    <option value="funk">Funk</option>
+                </select>
+            </label>
+            <a>Deixe o Link da sua melhor Rede Social</a>
+            <input type="RedeSocial">
+            <a>Deixe o Link de suas músicas ou catálogo(Spotify, Youtube, etc.)</a>
+            <input type="catalogo">
+            <br>
+            <button class="botao">Vamos para o próximo passo? <br>Clique aqui</button>
+        </form>
+    </main>
 </body>
+
 </html>

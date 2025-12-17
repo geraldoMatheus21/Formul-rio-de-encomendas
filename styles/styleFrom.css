@@ -1,9 +1,10 @@
 @font-face {
-    font-family: 'FraseDeApresentação';
-    src: url('../Fonts/BebasNeue-Regular.ttf') format('truetype');
+    font-family: 'Title';
+    src: url('../Fonts/varsity_2/varsity_regular.ttf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
+
 
 * {
     margin: 0;
@@ -12,7 +13,7 @@
 }
 
 body {
-    background-image: url('../Imagens/Background2.svg');
+    background-color: #898989;
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -24,15 +25,13 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: dimgray;
+    background-image: url(../Imagens/Background3.svg);
     height: 115px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 0 20px;
     z-index: 1000;
     border-radius: 0 0 15px 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    
 }
 
 /* Container dos logos - CENTRALIZADO */
@@ -40,10 +39,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap: clamp(20px, 6vw, 80px);
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 /* Links dos logos */
@@ -53,47 +53,38 @@ body {
     text-decoration: none;
 }
 
-/* Logos do formulário - MESMO TAMANHO */
+.logoform,
 .logokmform {
-    width: 150px;
-    height: auto;
-    max-width: 150px;
-    min-width: 150px;
+    height: clamp(50px, 8vw, 90px);
+    width: auto;
     display: block;
-    object-fit: contain;
-    object-position: center;
-    vertical-align: middle;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
-    transition: transform 0.3s ease;
-}
-.logoform{
-    width: 100px;
-    height: auto;
-    max-width: 150px;
-    display: block;
-    object-fit: contain;
-    object-position: center;
-    vertical-align: middle;
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
-    transition: transform 0.3s ease;
 }
 
+
+/* Hover */
 .logoform:hover, .logokmform:hover {
+    transform: scale(1.05);
+}
+
+.logoform:hover,
+.logokmform:hover {
     transform: scale(1.05);
 }
 
 /* ========== RECADO COM EFEITO DE FOGO ========== */
 .Recado {
     position: absolute;
-    right: 130px;       /* COLA NO CANTO DIREITO */
+    right: 130px;
+    /* COLA NO CANTO DIREITO */
     font-size: 20px;
     text-align: right;
     max-width: 200px;
     padding: 10px 15px;
+    color: goldenrod;
 
 }
 
-.Formulário{
+.Formulário {
     background-image: url('../Imagens/backgroundKM.svg');
     width: 80%;
     max-width: 900px;
@@ -103,31 +94,121 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 20px;
 }
+
+h1.Title {
+    font-size: 50px;
+    margin-top: 50px;
+    font-family: 'Title', Courier, monospace;
+    -webkit-text-stroke: 0.1px rgb(210, 212, 46); /* Largura e cor da borda */
+    color: rgb(0, 0, 0); /* Cor de dentro da letra */
+}
+
+form {
+    text-align: center;
+   gap: 5px;
+}
+
+form > * {
+    margin-bottom: 5px !important;
+}
+
+form > :not(input):not(select):not(button) {
+    display: block;
+    margin: 5px auto 1px;
+    color: black;
+    font-family: 'Title', Courier, monospace;
+    -webkit-text-stroke: 0.5px rgb(210, 212, 46); /* Largura e cor da borda */
+    color: rgb(0, 0, 0); /* Cor de dentro da letra */
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+input {
+    display: block;
+    margin: 0 auto 5px;
+    width: 350px;
+    height: 50px;
+    text-align: center;
+    border-radius: 20px;
+    background-image: url('../Imagens/Background2.svg');
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(255, 255, 255); /* Cor de dentro da letra */
+}
+
+select{
+    display: block;
+    margin: 0 auto 5px;
+    width: 350px;
+    height: 50px;
+    text-align: center;
+    border-radius: 20px;
+    background-image: url('../Imagens/Background2.svg');
+    font-size: 20px;
+    color: antiquewhite;
+}
+
+select option{
+    background-color: black;
+    color:rgb(255, 255, 255);
+    border-radius: 20px;
+    font-family: 'Title', Courier, monospace;
+    -webkit-text-stroke: 1px rgb(255, 1, 1); /* Largura e cor da borda */
+    color: rgb(255, 255, 255); /* Cor de dentro da letra */
+}
+
+br {
+    display: none;
+}
+
+.botao{
+    min-width: 200px; /* Nunca menor que 200px */
+    max-width: 500px; /* Nunca maior que 500px */
+
+    min-height: 50px;
+    
+    height: auto;
+    width: auto; /* Ajusta ao conteúdo */
+    border-radius: 20px;
+    font-size: 10px;
+    text-align: center;
+    padding: 20px 20px;
+
+    white-space: normal;
+    word-wrap: break-word;
+
+    font-family: 'Title', Courier, monospace;
+    color: antiquewhite;
+
+    background-image: url('../Imagens/Background2.svg');
+    -webkit-text-stroke: 0.1px rgb(255, 0, 0);
+}
+
+
 /* ========== RESPONSIVIDADE COMPLETA ========== */
 
 /* Tablets (768px) */
 @media (max-width: 768px) {
     .main-header-form {
-        height: 100px;
-        padding: 0 15px;
+        height: auto;
+        padding: 15px;
     }
-    
-    .logos-container-form {
-        gap: 50px;
-    }
-    
+
     .logoform, .logokmform {
-        width: 120px;
-        max-width: 120px;
-        min-width: 120px;
+        height: clamp(45px, 7vw, 80px); 
     }
-    
+
+    .logos-container-form {
+        gap: 40px;
+    }
+
     .Recado {
         max-width: 180px;
         padding: 8px 12px;
-        font-size: 0.2rem;
-        top: 20px;
+        font-size: 0.8rem;
         right: 15px;
     }
 }
@@ -135,25 +216,18 @@ body {
 /* Celulares grandes (480px) */
 @media (max-width: 480px) {
     .main-header-form {
-        height: 90px;
-        padding: 0 10px;
+        height: auto;
+        padding: 10px;
     }
-    
-    .logos-container-form {
-        gap: 30px;
-    }
-    
+
     .logoform, .logokmform {
-        width: 100px;
-        max-width: 100px;
-        min-width: 100px;
+        height: clamp(40px, 6vw, 70px); /* Apenas altura */
     }
-    
+
     .Recado {
         max-width: 150px;
         padding: 6px 10px;
-        font-size: 0.65rem;
-        top: 10px;
+        font-size: 0.7rem;
         right: 10px;
     }
 }
@@ -161,19 +235,9 @@ body {
 /* Celulares pequenos (360px) */
 @media (max-width: 360px) {
     .main-header-form {
-        height: 80px;
+        gap: 80px;
     }
-    
-    .logos-container-form {
-        gap: 20px;
-    }
-    
-    .logoform, .logokmform {
-        width: 85px;
-        max-width: 85px;
-        min-width: 85px;
-    }
-    
+
     .Recado {
         max-width: 130px;
         padding: 5px 8px;
@@ -191,7 +255,7 @@ body {
         justify-content: center !important;
         gap: 50px !important;
     }
-    
+
     .logoform, .logokmform {
         width: 120px !important;
         height: auto !important;
