@@ -1,0 +1,387 @@
+@font-face {
+    font-family: 'FraseDeApresentação';
+    src: url('../Fonts/crazy_killer/CRAZK___.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Frase2';
+    src: url('../Fonts/deathblood_2/DEATHBLOOD.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FraseOp';
+    src: url('../Fonts/fires/FIRES\ PERSONAL\ USE.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #898989;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* ========== HEADER ========== */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 5px 15px rgba(255, 251, 1, 0.562);
+}
+
+/* ========== LOGOS PERFEITAMENTE ALINHADOS ========== */
+.logos-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* LOGOS COM MESMO TAMANHO E ALINHAMENTO */
+.logo, .logokm {
+    max-width: 150px;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.logo:hover, .logokm:hover {
+    transform: scale(1.05);
+}
+
+/* ========== CONTEÚDO PRINCIPAL ========== */
+.Nav {
+    background-image: url('../Imagens/backgroundKM.svg');
+    width: 80%;
+    max-width: 900px;
+    margin: 140px auto 40px;
+    padding: 40px 30px;
+    min-height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ========== SEÇÕES DE CONTEÚDO ========== */
+.titleApresentacao {
+    padding: 20px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.efeito {
+    padding: 5px;
+    max-width: 700px;
+    margin: 0 auto 0;
+}
+
+/* ========== TEXTOS ========== */
+.titleApresentacao h1 {
+    font-family: 'Frase2', Arial, sans-serif;
+    color: #000000;
+    font-size: 32px;
+    text-align: center;
+}
+
+.tt {
+    color: #ecf0f1;
+    font-size: 2.2rem;
+    font-family: 'FraseDeApresentação', Arial, sans-serif;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.ttt {
+    color: #000000;
+    font-size: 0.9rem;
+    font-family: 'Frase2', Arial, sans-serif;
+    text-align: center;
+    font-weight: normal;
+    font-style: italic;
+    opacity: 0.9;
+    margin-top: -45px;
+}
+
+/* ========== BOTÕES PRETOS COM ANIMAÇÃO AMARELA ========== */
+.buttons-container {
+    font-family: 'FraseOp', Arial, sans-serif;
+    margin-top: 20px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ops-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 450px;
+    width: 100%;
+}
+
+.ops-list li {
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.ops-list li:hover {
+    transform: translateY(-6px);
+}
+
+.ops-list a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, #111 0%, #222 30%, #000 70%, #111 100%);
+    padding: 20px 22px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.4;
+    box-shadow: 
+        0 5px 20px rgba(0, 0, 0, 0.8),
+        0 0 0 1px rgba(255, 215, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid #333;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.ops-list a:hover {
+    background: linear-gradient(135deg, #000 0%, #111 30%, #222 70%, #000 100%);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.9),
+        0 0 15px rgba(255, 215, 0, 0.6),
+        0 0 25px rgba(255, 255, 100, 0.3),
+        inset 0 0 15px rgba(255, 215, 0, 0.1);
+    border-color: #ffd700;
+    transform: scale(1.02);
+}
+
+.ops-list a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -200%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 100, 0.1),
+        rgba(255, 215, 0, 0.4),
+        rgba(255, 255, 50, 0.6),
+        rgba(255, 215, 0, 0.4),
+        rgba(255, 255, 100, 0.1),
+        transparent
+    );
+    transition: left 0.9s ease-in-out;
+    animation: energyFlow 3s infinite linear;
+}
+
+@keyframes energyFlow {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.ops-list a:hover::before {
+    animation-duration: 1.5s;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 150, 0.2),
+        rgba(255, 255, 50, 0.7),
+        rgba(255, 255, 0, 0.9),
+        rgba(255, 255, 50, 0.7),
+        rgba(255, 255, 150, 0.2),
+        transparent
+    );
+}
+
+/* ========== RESPONSIVIDADE SIMPLIFICADA ========== */
+@media (max-width: 992px) {
+    .logos-container {
+        gap: 50px;
+    }
+    
+    .logo, .logokm {
+        width: 130px;
+        max-width: 130px;
+        min-width: 130px;
+    }
+    
+    .Nav {
+        width: 90%;
+        margin-top: 130px;
+        padding: 30px 25px;
+    }
+    
+    .tt {
+        font-size: 1.8rem;
+    }
+    
+    .ttt {
+        font-size: 1.1rem;
+    }
+    
+    .ops-list {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header {
+        height: 100px;
+        padding: 0 15px;
+    }
+    
+    .logos-container {
+        gap: 30px;
+    }
+    
+    .logo, .logokm {
+        width: 110px;
+        max-width: 110px;
+        min-width: 110px;
+    }
+    
+    .Nav {
+        width: 95%;
+        margin-top: 120px;
+        padding: 25px 20px;
+    }
+    
+    .titleApresentacao h1 {
+        font-size: 28px;
+    }
+    
+    .tt {
+        font-size: 1.6rem;
+    }
+    
+    .ttt {
+        font-size: 1rem;
+        margin-top: -35px;
+    }
+    
+    .ops-list {
+        max-width: 450px;
+        gap: 20px;
+    }
+    
+    .ops-list a {
+        padding: 20px 22px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        height: 90px;
+    }
+    
+    .logos-container {
+        gap: 20px;
+    }
+    
+    .logo, .logokm {
+        width: 90px;
+        max-width: 90px;
+        min-width: 90px;
+    }
+    
+    .Nav {
+        margin-top: 110px;
+        padding: 20px 15px;
+        width: 97%;
+    }
+    
+    .titleApresentacao h1 {
+        font-size: 22px;
+    }
+    
+    .tt {
+        font-size: 1.4rem;
+    }
+    
+    .ttt {
+        font-size: 0.9rem;
+        margin-top: -25px;
+    }
+    
+    .ops-list {
+        max-width: 100%;
+        gap: 18px;
+    }
+    
+    .ops-list a {
+        padding: 18px 20px;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 360px) {
+    .logos-container {
+        gap: 15px;
+    }
+    
+    .logo, .logokm {
+        width: 80px;
+        max-width: 80px;
+        min-width: 80px;
+    }
+    
+    .titleApresentacao h1 {
+        font-size: 18px;
+    }
+    
+    .tt {
+        font-size: 1.2rem;
+    }
+    
+    .ttt {
+        font-size: 0.8rem;
+        margin-top: -20px;
+    }
+    
+    .ops-list a {
+        padding: 16px 18px;
+        font-size: 0.8rem;
+    }
+}

@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Encomendas</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    </style>
 </head>
 <body>
     <!-- HEADER FIXO -->
     <header class="main-header">
-        <div class="header-container">
+        <!-- CORREÇÃO: Use apenas UM container para os dois logos -->
+        <div class="logos-container">
             <img src="../Imagens/LOGO TAKE 21 FINAL - 03.png" 
                  alt="logotake21" 
                  class="logo">
+            <img src="../Imagens/KM LOGO.png" 
+                 alt="logokm" 
+                 class="logokm">
         </div>
-        <div class="KM">
-            <img src="../Imagens/Rascunho Logo Killmonger.png" alt="logokm" class="logokm">
-        </div>
-    </header> <!-- FECHA AQUI o header -->
+    </header>
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="Nav">
@@ -27,21 +29,28 @@
         <article class="efeito">
             <h2 class="ttt">Tenha instrumentais autênticos e do jeito que deseja</h2>
         </article>
-        <main class="buttons-container">
-    <ul class="ops-list">
-        <li>
-            <a href="#">
-                Nos chame no WhatsApp para a compra de Beats de catálogos 
-                ou para agendar um atendimento
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                Preencha um Formulário para a Compra de Beats encomendados
-            </a>
-        </li>
-    </ul>
-</main>
+        
+        <!-- BOTÕES COM EFEITO FOGO -->
+        <div class="buttons-container">
+            <ul class="ops-list">
+                <li>
+                    <a href="https://wa.me/5521974725907">
+                        Nos chame no WhatsApp para a compra de Beats de catálogos 
+                        ou para agendar um atendimento
+                    </a>
+                </li>
+                <li>
+                    <a href="../Pedidos/formulario.html">
+                        Preencha um Formulário para a Compra de Beats encomendados
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Conheça nosso trabalho e nossos parceiros
+                    </a>
+                </li>
+            </ul>
+        </div>
     </main>
 </body>
 </html>
