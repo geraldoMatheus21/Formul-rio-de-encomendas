@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Title';
+    src: url('../Fonts/varsity_2/varsity_regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #696262;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+
+.header-informacoes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../Imagens/Background3.svg);
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    border-radius: 0 0 15px 15px;
+}
+
+/*conteiner das imagens*/
+.form-inform a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(20px, 6vw, 80px);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Links dos logos */
+.form-inform-2 a {
+    display: block;
+    line-height: 0;
+    text-decoration: none;
+}
+
+.logoform2{
+    height: clamp(50px, 8vw, 90px);
+    width: auto;
+    display: block;
+    margin-left: 5px;
+}
+
+.logokmform2 {
+    height: 100px;
+    margin-left: 450px;
+    margin-top: -90px;
+    width: auto;
+
+}
+
+.Recado{
+    /* COLA NO CANTO DIREITO */
+    font-size: 20px;
+    text-align: right;
+    max-width: 200px;
+    padding: 10px 15px;
+    color: goldenrod;
+    margin-left: 300px;
+    margin-left: 100px;
+}
+
+.formulario-instrumental{
+    background-image: url('../Imagens/Background2opaco.svg');
+    width: 80%;
+    max-width: 900px;
+    margin: 140px auto 40px;
+    padding: 40px 30px;
+    min-height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+h1.title {
+    font-family: 'Title', Courier, monospace;
+    text-align: center;
+}
+
+h2.campo1{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.input {
+    /*tamanho*/
+    width: 800px;
+    height: 200px;
+
+    /*para começar no topo*/
+    display: block;
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    /*aparencia*/
+    border-radius: 20px;
+    background-color: antiquewhite;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+
+    /*funcionalidade*/
+    resize: vertical;
+    overflow-y: auto;
+    border: 2px solid #ccc;
+    outline: none;
+    box-sizing: border-box;
+
+    /* Remove o estilo nativo do textarea */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
