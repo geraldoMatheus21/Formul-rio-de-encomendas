@@ -20,8 +20,29 @@
     </header>
     <main class="formulario-instrumental">
         <h1 class="title">Agora nos conte como você quer seu Beat<br>(SEU PRÓXIMO HIT)</h1>
-        <h2 class="campo1">Descreva brevemente sobre o beat que você quer(opcional)</h2>
-        <textarea class="input">a</textarea>
+        <form action="">
+            <h2 class="campo1">Descreva brevemente sobre o beat que você quer(opcional)</h2>
+            <textarea class="input"></textarea>
+            <form>
+            <label for="ref">Coloque aqui 3 referências de musicas, pode ser type Beat Também: </label>
+                <input 
+                    type="url" 
+                    id="link-1" 
+                    name="user-link" 
+                    required>
+                <input 
+                    type="url" 
+                    id="link-2" 
+                    name="user-link" 
+                    required>
+                <input 
+                    type="url" 
+                    id="link-3" 
+                    name="user-link" 
+                    required>
+                    <button type="submit" class="Enviar">Enviar link</button>
+        </form>
+        
     </main>
 </body>
 </html>
